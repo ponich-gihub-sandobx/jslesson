@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 1, Homework 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+
+        .wrapper {
+            width: 900px;
+            margin: 0 auto;
+            padding: 15px;
+            background: #2980b9;
+            color: #ecf0f1;
+            box-shadow: 1px 0px 8px 0px rgba(34, 60, 80, 0.2);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        button {
+            box-shadow: 1px 0px 8px 0px rgba(34, 60, 80, 0.2);
+            padding: 10px 20px;
+            background: #34495e;
+            color: #ccc;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2c3e50;
+        }
+
+        button:active {
+            background: #2c3e50;
+        }
+
+        .result {
+            margin: 10px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="wrapper">
+    <div class="text-center">
+        <span id="name"></span>
+        <p id="favoriteResult" class="result"></p>
+    </div>
+
+    <div>
+        <button id="eat">
+            Блюдо
+        </button>
+
+        <button id="alcDrink">
+            Алкогольный напиток
+        </button>
+
+        <button id="noAlcDrink">
+            Напиток
+        </button>
+    </div>
+</div>
+<script>
+    // для более удобной работы с элементами вынес в отдельные переменные
+    const $elName = document.getElementById('name');
+    const $elFavoriteResult = document.getElementById('favoriteResult');
+    const $btnEat = document.getElementById('eat');
+    const $btnAlcDrink = document.getElementById('alcDrink');
+    const $btnNoAlcDrink = document.getElementById('noAlcDrink');
+
+    // задаем данные по умолчанию:
+    $elName.innerText = 'Nikolay Ponich';
+
+    // обработка событий клика для кнопок:
+
+    // любимое блюдо
+    $btnEat.addEventListener('click', function (e) {
+        $elFavoriteResult.innerText = 'Сирники';
+    });
+
+    //
+    $btnAlcDrink.addEventListener('click', function (e) {
+        $elFavoriteResult.innerText = 'Пиво';
+    });
+
+    //
+    $btnNoAlcDrink.addEventListener('click', function (e) {
+        $elFavoriteResult.innerText = 'Компот';
+    });
+
+</script>
+</body>
+</html>
